@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Mode Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        transition: background-color 0.3s ease;
+      }
+
+      .button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 0 10px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+
+      .light {
+        background-color: lightblue;
+        color: white;
+      }
+
+      .light:hover {
+        background-color: #0095ff;
+      }
+
+      .dark {
+        background-color: #333;
+        color: white;
+      }
+
+      .dark:hover {
+        background-color: #444;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="button light" onclick="toggleDarkLight()" style="display: block;">Light</button>
+    <button class="button dark" onclick="toggleDarkLight()">Dark</button>
+    <script>
+      let darkMode = false;
+
+      function toggleDarkLight() {
+        darkMode = !darkMode;
+        if (darkMode) {
+          document.body.style.backgroundColor = "#333";
+          document.querySelector(".button.light").style.display = "none";
+          document.querySelector(".button.dark").style.display = "block";
+        } else {
+          document.body.style.backgroundColor = "white";
+          document.querySelector(".button.light").style.display = "block";
+          document.querySelector(".button.dark").style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>

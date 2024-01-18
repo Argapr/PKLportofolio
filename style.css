@@ -1,0 +1,385 @@
+body {
+  background-color: #ffffff;
+}
+.dark {
+  background-color: #333333;
+}
+
+:root {
+  --primary-text-color: #0000006a;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;  
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #0000005d;
+  border-radius: 34px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 42px;
+  width: 60px;
+  left: 4px;
+  bottom: 4px;
+  border-radius: 50px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+input:checked+.slider{
+  background-color: #0000005d;
+}
+input:focus+.slider {
+  box-shadow: 0 0 1px #ffbb70;
+}
+input:checked+.slider::before {
+  -webkit-transform: translateX(80px);
+  -webkit-transform: translateX(80px);
+  transform: translateX(80px);
+}
+
+#about {
+  width: 100%;
+  height: 100vh;
+}
+.col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.profile {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #00000038;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.dark-mode {
+  width: 150px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: #00000038;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fdfdfd;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  z-index: 10000;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  width: 100px;
+  height: 100px;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  margin: 130px 100px 0px 0px;
+  border-radius: 10px;
+}
+.dropdown-content a {
+  text-decoration: none;
+  color: #000000;
+}
+.dropdown-content .hr {
+  height: 2px;
+  text-align: center;
+  width: 120px;
+  background-color: #000000;
+  margin: 5px 0px 0px 20px;
+}
+
+#burgerIcon {
+  width: 20px;
+  height: auto;
+}
+#burgerIcon.active {
+  content: url("assets/close.png");
+  width: 20px;
+  height: auto; /* Ganti dengan path gambar silang */
+}
+
+.dropdown.active .dropdown-content {
+  display: block;
+}
+/* end dropdown */
+
+.a {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #00000041;
+  margin: 150px 0px 0px 1000px;
+  rotate: 15deg;
+}
+.b {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: #0000001a;
+  margin: 10px 0px 0px 800px;
+  rotate: -24deg;
+}
+.c {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #00000031;
+  margin: -20px 0px 0px 400px;
+  rotate: 24deg;
+}
+.d {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  background-color: #00000041;
+  margin: -20px 0px 0px 630px;
+  rotate: 24deg;
+}
+.e {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: #00000041;
+  margin: 5px 0px 0px 900px;
+  rotate: 24deg;
+}
+.f {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #0000001b;
+  margin: 0px 0px 0px 1050px;
+  rotate: 10deg;
+}
+.g {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #00000022;
+  margin: 100px 0px 0px 460px;
+  rotate: 50deg;
+}
+.location img {
+  width: auto;
+  height: 30px;
+}
+.location p {
+  color: #0000005a;
+  font-weight: 600;
+}
+
+#projek {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#projek h1 {
+  margin-top: -100px;
+}
+.carousel {
+  width: 1000px;
+  margin-top: 50px;
+}
+.carousel .carousel-inner {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 20px;
+}
+.carousel .carousel-item {
+  height: 600px;
+}
+.carousel .carousel-item img {
+  height: 450px;
+  width: auto;
+}
+.carousel-item .desk-projek {
+  display: flex;
+}
+.desk-projek .title-projek button {
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 1;
+}
+
+#kontak {
+  width: 100%;
+  height: 100vh;
+}
+#kontak .container .col {
+  width: 100%;
+  height: 250px;
+  background-color: transparent;
+  margin: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.footer {
+  width: 100%;
+  height: 50px;
+  background-color: #00000031;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 10px;
+  margin-top: 50px;
+}
+.deskripsi-about {
+  font-size: 18px;
+}
+
+.name {
+  font-size: 4rem;
+}
+.isi-projek .desk-card {
+  font-size: 12px;
+}
+@media (max-width: 780px) {
+
+  .a {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #00000041;
+    margin: 150px 0px 0px 300px;
+    rotate: 15deg;
+  }
+  .b {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: #0000001a;
+    margin: 10px 0px 0px 200px;
+    rotate: -24deg;
+  }
+  .c {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #00000031;
+    margin: -20px 0px 0px 50px;
+    rotate: 24deg;
+  }
+  .d {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    background-color: #00000041;
+    margin: -20px 0px 0px 250px;
+    rotate: 24deg;
+  }
+  .e {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: #00000041;
+    margin: 5px 0px 0px 360px;
+    rotate: 24deg;
+  }
+  .f {
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #0000001b;
+    margin: 0px 0px 0px 400px;
+    rotate: 10deg;
+  }
+  .g {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #00000022;
+    margin: 100px 0px 0px 80px;
+    rotate: 50deg;
+  }
+
+
+  .name {
+    font-size: 3rem;
+  }
+  .deskripsi-about {
+    font-size: 12px;
+  }
+  #projek {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .carousel {
+    width: 450px;
+    margin-top: 50px;
+  }
+  .carousel .carousel-item {
+    height: 400px;
+  }
+  .carousel .carousel-item img {
+    height: 250px;
+  }
+  .isi-projek p {
+    font-size: 8px;
+  }
+  .isi-projek .desk-card {
+    font-size: 7px;
+  }
+  .title-projek {
+    width: 150px;
+  }
+  .desk-projek .title-projek button {
+    width: 120px;
+    height: 30px;
+    border-radius: 8px;
+    background-color: transparent;
+    border: 1;
+  }
+  .title-projek button a {
+    font-size: 12px;
+  }
+  .desk-kontak {
+    font-size: 10px;
+  }
+}
