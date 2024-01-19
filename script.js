@@ -1,3 +1,4 @@
+// dropdown
 function toggleDropdown() {
     var burgerIcon = document.getElementById("burgerIcon");
     burgerIcon.classList.toggle("active");
