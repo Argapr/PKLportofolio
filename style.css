@@ -146,62 +146,92 @@ label img.moon {
 }
 /* end dropdown */
 
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px); /* Sesuaikan dengan besar pergerakan vertikal yang diinginkan */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.a, .b, .c, .d, .e, .f, .g {
+  animation: moveUpDown 2s infinite;
+}
+
 .a {
   width: 50px;
   height: 50px;
   border-radius: 10px;
   background-color: #00000041;
-  margin: 150px 0px 0px 1000px;
+  margin: 150px 0 0 1000px;
+  animation-delay: 0.2s; 
   rotate: 15deg;
 }
+
 .b {
   width: 20px;
   height: 20px;
   border-radius: 5px;
   background-color: #0000001a;
-  margin: 10px 0px 0px 800px;
+  margin: 10px 0 0 800px;
+  animation-delay: 0.4s;
   rotate: -24deg;
 }
+
 .c {
   width: 50px;
   height: 50px;
   border-radius: 10px;
   background-color: #00000031;
-  margin: -20px 0px 0px 400px;
+  margin: -20px 0 0 400px;
+  animation-delay: 0.6s;
   rotate: 24deg;
 }
+
 .d {
   width: 10px;
   height: 10px;
   border-radius: 2px;
   background-color: #00000041;
-  margin: -20px 0px 0px 630px;
+  margin: -20px 0 0 630px;
+  animation-delay: 0.8s;
   rotate: 24deg;
 }
+
 .e {
   width: 20px;
   height: 20px;
   border-radius: 5px;
   background-color: #00000041;
-  margin: 5px 0px 0px 900px;
+  margin: 5px 0 0 900px;
+  animation-delay: 1s;
   rotate: 24deg;
 }
+
 .f {
   width: 30px;
   height: 30px;
   border-radius: 10px;
   background-color: #0000001b;
-  margin: 0px 0px 0px 1050px;
+  margin: 0 0 0 1050px;
+  animation-delay: 1.2s;
   rotate: 10deg;
 }
+
 .g {
   width: 40px;
   height: 40px;
   border-radius: 10px;
   background-color: #00000022;
-  margin: 100px 0px 0px 460px;
+  margin: 100px 0 0 460px;
+  animation-delay: 1.4s;
   rotate: 50deg;
 }
+
 .location img {
   width: auto;
   height: 30px;
