@@ -1,61 +1,3 @@
-body {
-  background-color: #ffffff;
-}
-.dark {
-  background-color: #333333;
-}
-
-:root {
-  --primary-text-color: #0000006a;
-}
-
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 150px;
-  height: 50px;
-}
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;  
-}
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #0000005d;
-  border-radius: 34px;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-.slider::before {
-  position: absolute;
-  content: "";
-  height: 42px;
-  width: 60px;
-  left: 4px;
-  bottom: 4px;
-  border-radius: 50px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-input:checked+.slider{
-  background-color: #0000005d;
-}
-input:focus+.slider {
-  box-shadow: 0 0 1px #ffbb70;
-}
-input:checked+.slider::before {
-  -webkit-transform: translateX(80px);
-  -webkit-transform: translateX(80px);
-  transform: translateX(80px);
-}
-
 #about {
   width: 100%;
   height: 100vh;
@@ -73,13 +15,81 @@ input:checked+.slider::before {
   background-color: #00000038;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.dark-mode {
+
+/* darkmode */
+/* label {
   width: 150px;
   height: 50px;
+  position: relative;
+  display: block;
+  background: #00000038;
   border-radius: 50px;
-  background-color: #00000038;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+  transition: 0.3 s;
 }
+
+label::after {
+  content: "";
+  width: 70px;
+  height: 40px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: linear-gradient(180deg, #dddddd, #ffffff);
+  border-radius: 180px;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+input {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+input:checked + label {
+  background: #5959592d;
+  box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.2);
+}
+input:checked + label::after {
+  left: 145px;
+  transform: translateX(-100%);
+  background: linear-gradient(180deg, #e5e5e5, #ffffff);
+}
+input:active:after {
+  width: 260px;
+}
+.background {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  z-index: -1;
+  position: absolute;
+  transition: 0.3s;
+}
+input:checked + label + .background {
+  background-color: #969595;
+  height: 606%;
+}
+input:checked + label + .background + .location p {
+  color: #000000;
+}
+label img {
+  position: absolute;
+  width: 20px;
+  top: 10px;
+  z-index: 100;
+  width: 30px;
+  height: auto;
+}
+label img.sun {
+  left: 20px;
+  transition: 0.3s;
+}
+label img.moon {
+  left: 95px;
+  transition: 0.3s;
+} */
+
 
 /* dropdown */
 .dropdown {
@@ -257,7 +267,7 @@ input:checked+.slider::before {
 
 .footer {
   width: 100%;
-  height: 50px;
+  height: 54px;
   background-color: #00000031;
   display: flex;
   align-items: center;
@@ -276,14 +286,24 @@ input:checked+.slider::before {
 .isi-projek .desk-card {
   font-size: 12px;
 }
+
+.title-projek .judul-projek {
+  font-size: 20px;
+}
+
+/* responsive */
 @media (max-width: 780px) {
 
+  input:checked + label + .background {
+    background-color: #333333;
+    height: 621%;
+  }
   .a {
     width: 50px;
     height: 50px;
     border-radius: 10px;
     background-color: #00000041;
-    margin: 150px 0px 0px 300px;
+    margin: 150px 0px 0px 250px;
     rotate: 15deg;
   }
   .b {
@@ -291,7 +311,7 @@ input:checked+.slider::before {
     height: 20px;
     border-radius: 5px;
     background-color: #0000001a;
-    margin: 10px 0px 0px 200px;
+    margin: -10px 0px 0px 130px;
     rotate: -24deg;
   }
   .c {
@@ -299,7 +319,7 @@ input:checked+.slider::before {
     height: 50px;
     border-radius: 10px;
     background-color: #00000031;
-    margin: -20px 0px 0px 50px;
+    margin: -30px 0px 0px 20px;
     rotate: 24deg;
   }
   .d {
@@ -307,15 +327,15 @@ input:checked+.slider::before {
     height: 10px;
     border-radius: 2px;
     background-color: #00000041;
-    margin: -20px 0px 0px 250px;
+    margin: -50px 0px 0px 180px;
     rotate: 24deg;
   }
   .e {
     width: 20px;
     height: 20px;
     border-radius: 5px;
-    background-color: #00000041;
-    margin: 5px 0px 0px 360px;
+    background-color: #00000010;
+    margin: 80px 0px 0px 260px;
     rotate: 24deg;
   }
   .f {
@@ -323,7 +343,7 @@ input:checked+.slider::before {
     height: 30px;
     border-radius: 10px;
     background-color: #0000001b;
-    margin: 0px 0px 0px 400px;
+    margin: 0px 0px 0px 300px;
     rotate: 10deg;
   }
   .g {
@@ -331,16 +351,23 @@ input:checked+.slider::before {
     height: 40px;
     border-radius: 10px;
     background-color: #00000022;
-    margin: 100px 0px 0px 80px;
+    margin: 10px 0px 0px 70px;
     rotate: 50deg;
   }
 
 
   .name {
-    font-size: 3rem;
+    font-size: 2.2rem;
   }
   .deskripsi-about {
-    font-size: 12px;
+    font-size: 10px;
+  }
+  .location img {
+    width: auto;
+    height: 15px;
+  }
+  .location p {
+    font-size: 10px;
   }
   #projek {
     width: 100%;
@@ -351,35 +378,44 @@ input:checked+.slider::before {
     flex-direction: column;
   }
   .carousel {
-    width: 450px;
+    width: 350px;
     margin-top: 50px;
   }
   .carousel .carousel-item {
-    height: 400px;
+    height: 300px;
   }
   .carousel .carousel-item img {
-    height: 250px;
+    height: 200px;
   }
   .isi-projek p {
-    font-size: 8px;
+    font-size: 6px;
   }
   .isi-projek .desk-card {
-    font-size: 7px;
+    font-size: 5px;
   }
   .title-projek {
-    width: 150px;
+    width: 100px;
+  }
+  .title-projek .judul-projek {
+    font-size: 10px;
   }
   .desk-projek .title-projek button {
-    width: 120px;
+    width: 90px;
     height: 30px;
     border-radius: 8px;
     background-color: transparent;
     border: 1;
   }
   .title-projek button a {
-    font-size: 12px;
+    font-size: 9px;
   }
   .desk-kontak {
+    font-size: 8px;
+  }
+  .desk-sosmed {
     font-size: 10px;
+  }
+  .footer{
+    margin-top: 100px;
   }
 }
